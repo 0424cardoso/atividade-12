@@ -11,19 +11,7 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
-  <style>
-    .esquerda {
-      text-align: right;
-    }
-
-    .centro {
-      text-align: center;
-    }
-
-    .direita {
-      text-align: left;
-    }
-  </style>
+  
 
 </head>
 
@@ -35,12 +23,24 @@
 
 
   <table>
-    <tr class="esquerda">
-      <button type="button" class="btn btn-primary">mostrar</button>
-    <tr class="centro">
-      <button type="button" class="btn btn-success">ocultar</button>
-    <tr class="direita">
-      <button type="button" class="btn btn-danger">trocar cor</button>
+    <tr id="esquerda">
+      <button type="button" onclick="mostrar()"class="btn btn-primary">mostrar</button>
+
+
+
+
+
+
+
+    <tr id="centro">
+      <button type="button"  onclick="ocultar()"class="btn btn-success">ocultar</button>
+
+
+
+
+    <tr id="direita">
+      
+      <button type="button" id="btnTrocarcor" onclick="MudarCor()"class="btn btn-danger">trocar cor</button>
 
 
     </tr>
@@ -51,8 +51,29 @@
 
 
   <input id="input-texto">
-  <button id="btnTrocartexto" onclick="mostrarTexto()">trocar texto</button>
+  <button id="btnTrocartexto" onclick="mostrarTexto()" class="btn btn-warning" >trocar texto</button>
   <h1 id="resultadoTexto">NENHUM TEXTO DIGITADO</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
 
 </body>
 <script>
@@ -65,7 +86,34 @@
   
 
 
+
+function MudarCor(){
+
+document.getElementById("resultadoTexto").style.color="red";
+}
+function ocultar(){
+
+document.getElementById("resultadoTexto").style.color="white";
+}
+function mostrar(){
+
+document.getElementById("resultadoTexto").style.color="black";
+}
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
